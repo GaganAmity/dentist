@@ -234,28 +234,13 @@ form.example::after {
       html,
       body {
         overflow-x: hidden;
-        height: 100%;
+        margin: 0;
       }
 
       .slider {
-        height: 100%;
         position: relative;
         overflow: hidden;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: row nowrap;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -webkit-box-align: end;
-        -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        padding-bottom: calc(4rem + 12px);
       }
       .slider__nav {
         width: 12px;
@@ -272,33 +257,38 @@ form.example::after {
         appearance: none;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        position: absolute;
+        bottom: 0;
+      }
+      .slider__nav:nth-of-type(1) {
+        left: calc(50% - 36px - 18px);
+      }
+      .slider__nav:nth-of-type(2) {
+        left: calc(50% - 18px);
+      }
+      .slider__nav:nth-of-type(3) {
+        left: calc(50% + 18px);
       }
       .slider__nav:checked {
         -webkit-animation: check 0.4s linear forwards;
         animation: check 0.4s linear forwards;
       }
       .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
-        left: 0%;
+        transform: translateX(0);
       }
       .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
-        left: -120%;
+        transform: translateX(-33.333%);
       }
       .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
-        left: -260%;
-      }
-      .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
-        left: -300%;
+        transform: translateX(-66.666%);
       }
       .slider__inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 400%;
-        height: 100%;
+        width: 300%;
+        height: calc(100% - 12px - 4rem);
         background-image: url(./css/assests/Rectangle\ 179.svg);
 
         -webkit-transition: left 0.4s;
-        transition: left 0.4s;
+        transition: transform 0.4s;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -308,12 +298,14 @@ form.example::after {
         flex-flow: row nowrap;
       }
       .slider__contents {
-        height: 100%;
-        padding: 0rem 20rem;
-
+        padding: 0;
         display: flex;
-        width: 50%;
+        justify-content: flex-end;
+        width: 33.333%;
         align-items: center;
+      }
+      .slider__contents > div {
+        margin: 0 3vw;
       }
       .slider__image {
         font-size: 2.7rem;
@@ -417,6 +409,9 @@ form.example::after {
     float: none;
     display: block;
     text-align: left;
+  }
+  .slider__contents{
+    flex-direction: column;
   }
 }
 
@@ -720,17 +715,15 @@ form.example::after {
     
     <!--Fifth section (Testimonies)-->
 
-    
-    <center>
-      <div style="background-color:#553160;margin:0%;">
-        <h3 style="color:#F86CB5;font-family:Bely Display;margin:0%;padding:0%;"><br>Testimonies</h3>
-        <br>
-        <h1 style="font-family:Playfair Display;margin:0%;color:white;font-size:300%;">What our clients are saying</h1>
-      </div>
-    </center>
-  
+    <div class="testimonies">
+      <center>
+        <div style="background-color:#553160;margin:0%;">
+          <h3 style="color:#F86CB5;font-family:Bely Display;margin:0%;padding:0%;"><br>Testimonies</h3>
+          <br>
+          <h1 style="font-family:Playfair Display;margin:0%;color:white;font-size:300%;">What our clients are saying</h1>
+        </div>
+      </center>
       <div class="slider" style="background-color: #553160;color:white;">
-        
         <input
           type="radio"
           name="slider"
@@ -741,16 +734,10 @@ form.example::after {
         <input type="radio" name="slider" title="slide2" class="slider__nav" />
         <input type="radio" name="slider" title="slide3" class="slider__nav" />
   
-        
-  
         <div class="slider__inner">
-          
-         
-        
-  
           <div class="slider__contents" style="display: flex">
   
-            <div style="margin-right: 10%">
+            <div>
               <h1>01</h1>
               <p class="slider__txt" style="font-size: 20px; text-align: justify;font-family:Playfair Display;">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -777,8 +764,8 @@ form.example::after {
             </div>
           </div>
   
-          <div class="slider__contents" style="display: flex; padding: 0rem">
-            <div style="margin-right: 10%">
+          <div class="slider__contents">
+            <div>
               <h1>03</h1>
               <p class="slider__txt" style="font-size: 20px; text-align: justify;font-family:Playfair Display;">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -806,7 +793,7 @@ form.example::after {
           </div>
   
           <div class="slider__contents" style="display: flex">
-            <div style="margin-right: 10%">
+            <div>
               <h1>05</h1>
               <p class="slider__txt" style="font-size: 20px; text-align: justify;font-family:Playfair Display;">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -836,6 +823,10 @@ form.example::after {
          
         </div>
       </div>
+    </div>
+    
+  
+      
 
 
     <!-- 6th sectino (Dentistry at home)-->
