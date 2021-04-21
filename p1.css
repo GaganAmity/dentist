@@ -1,4 +1,9 @@
 .class1 {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.class1 {
   display: grid;
   /* grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
   grid-gap: 2em; */
@@ -47,7 +52,7 @@
 .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 300px;
+  height: 400px;
   perspective: 1000px;
 }
 
