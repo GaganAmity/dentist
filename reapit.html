@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Dr.Panjikar's</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,6 +79,16 @@
           text-align: justify;
           
       }
+      .row1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-area: auto;
+        background-color:#553160;
+        color:white;
+      }
+
+      
+
 
       @media only screen and (max-width: 800px) {
         /* For tablets: */
@@ -93,6 +104,20 @@
         .main
          {
           width: 100%;
+        }
+
+        .row1{
+          display:grid;
+          grid-template-columns: 1fr;
+
+        }
+
+        .row3{
+          float: center;
+          right:0;
+          left:0;
+
+
         }
       }
 
@@ -126,9 +151,7 @@
   width: 100%;
 }
 
-/** {
-  margin: 20px 20px;
-}*/
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -347,7 +370,7 @@ form.example::after {
 
 
 
-/* Navigation bar*/
+/* Navigation bar
 .topnav {
   overflow: hidden;
   background-color: transparent;
@@ -413,10 +436,154 @@ form.example::after {
   .slider__contents{
     flex-direction: column;
   }
+}*/
+
+*{text-decoration:none; list-style:none; margin:0px; padding:0px; outline:none;}
+body{margin:0px; padding:0px; font-family: 'Open Sans', sans-serif;}
+section{width:100%; max-width:1200px; margin:0px auto; display:table; position:relative;}
+
+
+header{width:100%; display:table; background-color:#fde428; margin-bottom:50px;}
+#logo{float:left; font-size:24px; text-transform:uppercase; color:#002e5b; font-weight:600; padding:20px 0px;}
+nav{width:auto; float:right;}
+nav ul{display:table; float:right;}
+nav ul li{float:left;}
+nav ul li:last-child{padding-right:0px;}
+nav ul li a{color:#002e5b; font-size:18px; padding: 25px 20px; display:inline-block; transition: all 0.5s ease 0s;}
+nav ul li a:hover{background-color:#002e5b; color:#fde428; transition: all 0.5s ease 0s;}
+nav ul li a:hover i{color:#fde428; transition: all 0.5s ease 0s;}
+nav ul li a i{padding-right:10px; color:#002e5b; transition: all 0.5s ease 0s;}
+
+.toggle-menu ul{display:table; width:25px;}
+.toggle-menu ul li{width:100%; height:3px; background-color:#002e5b; margin-bottom:4px;}
+.toggle-menu ul li:last-child{margin-bottom:0px;}
+
+input[type=checkbox], label{display:none;}
+
+.content{display:table; margin-bottom:60px; width:900px;}
+.content h2{font-size:18px; font-weight:500; color:#002e5b; border-bottom:1px solid #fde428; display:table; padding-bottom:10px; margin-bottom:10px;}
+.content p{font-size:14px; line-height:22px; color:#7c7c7c; text-align:justify;}
+
+
+
+
+@media only screen and (max-width: 1440px) {
+section{max-width:95%;}
+}
+
+@media only screen and (max-width: 980px) {
+header{padding:20px 0px;}
+#logo{padding:0px;}
+input[type=checkbox] {position: absolute; top: -9999px; left: -9999px; background:none;}
+input[type=checkbox]:fous{background:none;}
+label {float:right; padding:8px 0px; display:inline-block; cursor:pointer; }
+input[type=checkbox]:checked ~ nav {display:block;}
+
+nav{display:none; position:absolute; right:0px; top:53px; background-color:#002e5b; padding:0px; z-index:99;}
+nav ul{width:auto;}
+nav ul li{float:none; padding:0px; width:100%; display:table;}
+nav ul li a{color:#FFF; font-size:15px; padding:10px 20px; display:block; border-bottom: 1px solid rgba(225,225,225,0.1);}
+nav ul li a i{color:#fde428; padding-right:13px;}
+}
+
+@media only screen and (max-width: 980px) {
+.content{width:90%;}
+}
+
+@media only screen and (max-width: 568px) {
+h1{padding:25px 0px;}
+h1 span{display:block;}
+}
+
+@media only screen and (max-width: 480px) {
+section {max-width: 90%;}
+}
+
+@media only screen and (max-width: 360px) {
+h1{font-size:20px;}
+label{padding:5px 0px;}
+#logo{font-size: 20px;}
+nav{top:47px;}
+}
+
+@media only screen and (max-width: 320px) {
+h1 {padding: 20px 0px;}
 }
 
 
-    </style>
+header{width:100%; display:table; background-color:#FECC2F; margin-bottom:50px;}
+#logo{float:left; font-size:24px; text-transform:uppercase; color:#002e5b; font-weight:600; padding:20px 0px;}
+nav{width:auto; float:right;}
+nav ul{display:table; float:right;}
+nav ul li{float:left;}
+nav ul li:last-child{padding-right:0px;}
+nav ul li a{color:#002e5b; font-size:18px; padding: 25px 60px 25px 10px ; display:inline-block; transition: all 0.5s ease 0s;}
+nav ul li a:hover{background-color:#FECC2F; color:#553160; transition: all 0.5s ease 0s;}
+nav ul li a:hover i{color:#FECC2F; transition: all 0.5s ease 0s;}
+nav ul li a i{padding-right:10px; color:#002e5b; transition: all 0.5s ease 0s;}
+
+.toggle-menu ul{display:table; width:25px;}
+.toggle-menu ul li{width:100%; height:3px; background-color:#002e5b; margin-bottom:4px;}
+.toggle-menu ul li:last-child{margin-bottom:0px;}
+
+input[type=checkbox], label{display:none;}
+
+.content{display:table; margin-bottom:60px; width:900px;}
+.content h2{font-size:18px; font-weight:500; color:#002e5b; border-bottom:1px solid #FECC2F; display:table; padding-bottom:10px; margin-bottom:10px;}
+.content p{font-size:14px; line-height:22px; color:#7c7c7c; text-align:justify;}
+
+
+
+@media only screen and (max-width: 1440px) {
+section{max-width:95%;}
+}
+
+@media only screen and (max-width: 980px) {
+header{padding:20px 0px;}
+#logo{padding:0px;}
+input[type=checkbox] {position: absolute; top: -9999px; left: -9999px; background:none;}
+input[type=checkbox]:fous{background:none;}
+label {float:right; padding:8px 0px; display:inline-block; cursor:pointer; }
+input[type=checkbox]:checked ~ nav {display:block;}
+
+nav{display:none; position:absolute; right:0px; top:53px; background-color:#FECC2F; padding-right:40px; z-index:99;}
+nav ul{width:auto;}
+nav ul li{float:none; padding:0px; width:100%; display:table;}
+nav ul li a{color:white; font-size:15px; padding:10px 20px; display:block; border-bottom: 1px solid rgba(225,225,225,0.1);}
+nav ul li a i{color:#FECC2F; padding-right:13px;}
+}
+
+@media only screen and (max-width: 980px) {
+.content{width:90%;}
+}
+
+@media only screen and (max-width: 568px) {
+h1{padding:25px 0px;}
+h1 span{display:block;}
+}
+
+@media only screen and (max-width: 480px) {
+section {max-width: 90%;}
+}
+
+@media only screen and (max-width: 360px) {
+h1{font-size:20px;}
+label{padding:5px 0px;}
+#logo{font-size: 20px;}
+nav{top:47px;}
+}
+
+@media only screen and (max-width: 320px) {
+h1 {padding: 20px 0px;}
+}
+
+
+
+</style>
+
+
+
+
   </head>
 
 
@@ -429,19 +596,26 @@ form.example::after {
       <div class="one2"></div>
     <div class="first">
       <p><div id="logo"><img  src="Untitled-1/Untitled-1.png" alt="Pineapple" style="width:315px;height:315px; margin-right:1px;"></div>
-        <br><br>
-        <h1>DR PANJIKAR'S</h1>
-        <h2>Your one stop clinic for every dental <br> and facial aesthetic needs.</h2>
+        <br><br><br><br><br>
+        <h1 style="font-family:MinervaModern;font-size:45px;padding-right:10%;">DR PANJIKAR'S</h1><br>
+        <p style="font-family:Playfair Display;font-size:38px;">Your one stop clinic for every dental and facial aesthetic needs.</p>
       </p>
     </div>
+    <br>
+    <br> <br>
+    <br> <br>
+    <br> <br>
 
 
     <!--Second section-->
 
     <div class="second">
-      <center>
-        <h2>. <em>Maxillofacial & Periodontics Centre</em> .</h2>
-      </center>
+      
+        
+        <marquee width="100%" direction="right" style="padding:0%;margin:0%;">
+          <p style="font-family:Playfair Display;font-size:25px;padding:1%;margin:0%;">. &nbsp Maxillofacial & <em>Periodontics</em> Centre &nbsp .
+           </p>
+          </marquee>
 
     </div>
 
@@ -453,42 +627,50 @@ form.example::after {
       
       <div class="row">
 
-      
-
-        <div class="topnav" id="myTopnav" style="display:flex;">
-          <br>
-          <img src="Untitled-1/Untitled-1.png" class="brand-logo" style="align-items: center;width:5%;height:5%;float:left;" />
-          <h3 style="padding:0% 30% 0% 0%;float:left;">Dr.Panjikar's</h3>
-          <a href="#news" >Services</a>
-          <a href="#contact">Home Dentistry</a>
+      <br>
+        
+        <header >
+          <section>
+            
+            <a href="#"  target="_blank"><img src="Untitled-1/Untitled-1.png" class="brand-logo" 
+              style="align-items: center;width:6%;height:6%;float:left;" /></a>  
+          <a href="#" id="logo" target="_blank" style="font-family:MinervaModern;color:#553160;">DR PANJIKAR'S</a>
+          
+          
+          <label for="toggle-1" class="toggle-menu"><ul><li></li> <li></li> <li></li></ul></label>
+          <input type="checkbox" id="toggle-1">
+          
+          <nav>
+          <ul>
+          <li><a href="#logo"><i class="icon-home"></i>Services</a></li>
+          <li><a href="#about"><i class="icon-user"></i>Home Dentistry</a></li>
+          <li><a href="#about" ><i class="icon-user"></i><input type=button name="abc" value="Organise your Visit"  style="background-color: transparent;  
+            width:120%; padding:4%; color:#553160; border-radius:10px;" /></a></li>
+          
+          
+          </ul>
+          </nav>
+          
+          
+          </section>
+          </header>
          
-          <a href="#about">Organise your visit</a>
-          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
-        
-        
-        
-        <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
+
+          
+          
 
 
-        <div class="column" ">
+        <div class="column" style="padding-right:10%;">
 
 
             
           <h2 style="font-family:Playfair Display;font-size: 220%;">Your one stop clinic for everyday dental and facial aesthetic needs</h2>
+
+          <br>
           
           <div class="team">
           <p  style="font-family:'Times New Roman', Times, serif;">Welcome to Dr Panjikar’s , we are a team of maxillofacial surgeon and orthodontist, who are dedicated to maintain and improve your facial aesthetic and health with the most advanced techniques there are out there.
-            <br>
+            <br><br>
             <br> <input type=button name="abc" value="Get a Virtual Consult"  style="background-color: transparent; 
              width:50%; padding:2%; color:#553160; border-radius:10px;" />
           </p>
@@ -505,13 +687,16 @@ form.example::after {
       </div>
 
       <div class="row">
-        <div class="column" ">
+        <div class="column" style="padding-right:10%;">
 
-          <h3 style="color: #F86CB5;font-family:Avenir;">Our team of experts</h3>
+          <h3 style="color: #F86CB5;font-family:Avenir;" >Our team of experts</h3>
+          <br>
 
           <h5 style="font-family:Avenir;">ORAL SURGEON</h5>
+          <br>
             
           <h2 style="font-family:Avenir;">Dr.Priyesh Panjikar</h2>
+          <br>
           
           <div class="team">
           <p style="font-family:'Times New Roman', Times, serif;">Dr Priyesh Panjikar has done his Bachelor of dental surgery 
@@ -537,10 +722,13 @@ form.example::after {
       </div>
 
       <div class="row">
-        <div class="column" ">
+        <div class="column" style="padding-right:10%;">
            
           <h5 style="font-family:Avenir;">ORAL SURGEON</h5>
+          <br>
           <h2>Dr. Apoorva Panjikar</h2>
+          <br>
+          
           
           <div class="team">
           <p style="font-family:'Times New Roman', Times, serif;">Dr Apoorva Jha Panjikar has done her bachelor of dental surgery
@@ -569,7 +757,9 @@ form.example::after {
     <div class="teamback" style="background-color: #f1f1f1; margin-bottom: 0%;">
       <center>
       <h3 style="color: #F86CB5;font-family:Avenir; padding:3% 0% 0% 0%;font-size: 20px;" >SERVICES</h3>
+      <br>
       <h1 style="font-family:Playfair Display;color:#553160;"><strong>Our Offerings</strong></h1>
+      <br><br>
 
     </center>
     <div class="class1-outer">
@@ -825,7 +1015,9 @@ form.example::after {
       </div>
     </div>
     
-  
+    <center>
+      <h4 style="color:#F86CB5;background-color:#553160; font-family: Adelle; padding:0% 0% 3% 0%; margin:0%;"> <u>View our Testimonials &#8599;</u></h4>
+    </center>
       
 
 
@@ -839,15 +1031,16 @@ form.example::after {
         <div class="imgk">
           <br>
           <h4 style="color:#F86CB5;font-family: Bely Display;">Dentistry At Home</h4>
+          <br>
       <img src="Untitled-1/video.png" style="height:350px" alt="scooter illustration" />
     </div>
     </div>
 
 
-      <div class="column" ">
+      <div class="column" style="padding-right:10%;">
           
         <h2 style="font-family:Playfair Display;font-size: 220%;">Your one stop clinic for everyday dental and facial aesthetic needs</h2>
-        
+        <br>
         <div class="team">
         <p  style="font-family:'Times New Roman', Times, serif;">Lorem Ipsum is simply dummy text of the
            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -857,9 +1050,7 @@ form.example::after {
           <br> <input type=button name="abc" value="Get a Virtual Consult"  style="background-color: transparent; 
            width:50%; padding:2%; color:#553160; border-radius:10px;margin:0%;" />
         </p>
-      </div>
-    
-              
+      </div>        
       </div>
       
     </div>
@@ -867,70 +1058,86 @@ form.example::after {
     <!--Last section (form )-->
 
 
-    <div class="row" style="background-color:#553160;color:white; ">
-      <img src="Untitled-1/Screenshot 2021-01-29 at 12.16.39 AM.png" alt="Pineapple" style="width:50%; height:670px;float:right;">
-        <h1 style="padding:1% 1% 0% 1%; font-family:Meno Banner;margin:0%;">&nbsp Say Aaaahhhhhhh....</h1>
-        <h4 style="color:#F86CB5; font-family:Bely Display;padding:0% 0% 0% 1%;">&nbsp &nbsp &nbsp Schedule Your Visit</h4>
+    <div class="row1" >
 
-        &nbsp &nbsp <input type="text" placeholder="Full Name |"
-         style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
-         <hr style="width:45%; background-color: #F86CB5;">
-         <br>
-        &nbsp &nbsp <input type="text" placeholder="Telephone |"
-        style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
-        <hr style="width:45%; color:#F86CB5">
-        <br>
-        &nbsp &nbsp <input type="text" placeholder="Email |"
-         style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
-         <hr style="width:45%; color:#F86CB5;">
-         <br>
+      
+      
+        <div class="row2" style="padding-right:5%;margin:0%;" >
+          <br>
          
-        &nbsp &nbsp <input type="text" placeholder="Message |"
-        style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
-        <hr style="width:45%; color:#F86CB5;">
+        <h1 style="padding:1% 1% 0% 1%; font-family:Meno Banner;margin:0%;">&nbsp &nbsp Say Aaaahhhh......</h1>
         <br>
         
+        <h4 style="color:#F86CB5; font-family:Bely Display;padding:0% 0% 0% 1%;">&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp Schedule Your Visit</h4>
+          <br><br>
+         
 
-      <div style="display:flex; margin-left:5%;">
-
-        <input type=button name="abc" value="Book an appointment"  style="background-color: transparent;  
-        width:35%; padding:2%; color:white; border-radius:20px;border-color:#F86CB5;" />
-
-        &nbsp
-        &nbsp
-        &nbsp
-        &nbsp
-
-        <input type=button name="abc" value="Get a Virtual Consult"  style="background-color: transparent;  
-        width:35%; padding:2%; color:white; border-radius:20px;border-color:#F86CB5;" />
-
+        <div style="padding-left:10%;padding-right:10%;">  
+         <input type="text" placeholder="Full Name |"
+         style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
+         <hr style="width:45%; background-color: #F86CB5;">
+         <br><br>
+         <input type="text" placeholder="Telephone |"
+        style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
+        <hr style="width:45%; color:#F86CB5">
+        <br><br>
+         <input type="text" placeholder="Email |"
+         style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
+         <hr style="width:45%; color:#F86CB5;">
+         <br><br>
+         
+         <input type="text" placeholder="Message |"
+        style="background-color: transparent;border-color: transparent; color:white;padding-left:1%;font-size: 18px;"/>
+        <hr style="width:45%; color:#F86CB5;">
+        <br><br><br>
+        
       </div>
 
+      
+      <div class="row" style=" margin-right:30%; ">
+
+        <div class="column"  >
+        <input type=button name="abc" value="Book an appointment"  style="background-color: transparent;  
+        width:fit-content; padding:7% 8%; color:white; border-radius:20px;border-color:#F86CB5;" />
+        </div>
+       
+        
+        <div class="column" style="padding-right:10%">
+        <input type=button name="abc" value="Get a Virtual Consult"  style="background-color: transparent;  
+        width:auto; padding:7% 8%; color:white; border-radius:20px;border-color:#F86CB5;" />
+        </div>
+      </div>
+      
+
+    
       <br>
       <br>
-       <div style="display:flex; margin-left:5%; font-size:20px;font-family:Avenir;">
-         <p><strong>Get in touch</strong> on (02) 6282 7711 <br> Email us hello@drpranjikar.com</p>
-         <p>&nbsp
-          &nbsp
-          &nbsp <strong>Get Socia</strong>l</p>
-         
-       </div>
+
+      
+      <p style="margin-left:7%;font-family:Avenir;font-size:18px;"><strong>Get in touch on </strong> (02) 6282 7711 <br> 
+        Email us hello@drpranjikar.com </p>
+        <br>
+        
+        <p style="margin-left:20%;font-family:Avenir;font-size:18px;"><strong>Get Social </strong> </p>
+      
+
+      
 
        <br>
        <br>
+
+      
 
        <p style="margin-left:5%;font-size:10px;" >Copyright </p>
        <p style="margin-left:40%;font-size:10px;" >Privacy Policy </p>
-
-
-
-
-         
-      
     
+    </div>
 
-    
-    
+    <div class="row3">
+      <img src="Untitled-1/Screenshot 2021-01-29 at 12.16.39 AM.png"
+       alt="Pineapple" style="max-width:fit-content;height:670px;margin:0%;padding:0%;"
+        >
+        </div>
     
     </div>
           
